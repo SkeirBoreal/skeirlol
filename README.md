@@ -1,2 +1,2 @@
 # skeirlol
-skeir.lol repository
+idk not doing much with this yet
