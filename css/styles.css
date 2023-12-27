@@ -1,0 +1,152 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background: linear-gradient(to top, #b8e9ee 10%, #841dd4 15%, #4193f1 40%, #f8d37b 65%, #f46ead 100%);
+}  
+
+.sky {
+	height: 45vh;
+	background: linear-gradient(to bottom, #2961c8 0%, #6ba1df 35%, #ba52e6 60%, #ff6b51 75%, #f7945f 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.sun-shine {
+	content: '';
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	width: 100px;
+	height: 100vh;
+	background: linear-gradient(
+		to bottom,
+		rgba(230, 101, 26, 0) 20%,
+		rgb(243, 228, 111) 50% 
+	);
+	transform: translateX(-50%) rotateX(180deg);
+	transform-origin: top;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.sky::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 100px;
+	height: 50px;
+	background-color: #ffdd6e;
+	border-radius: 100px 100px 0 0;
+	transform: translateX(-50%);
+	box-shadow: 0 0 15px 12px rgba(255, 191, 0, 0.6);
+}
+
+.beach {
+	height: 20vh;
+	background-color: #f4bf70;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 4;
+	border-top-left-radius: 80% 100px;
+	border-top-right-radius: 80% 100px;
+}
+
+header {
+	color: white;
+	padding: 20px 0;
+	text-align: center;
+	top: 4vh;
+	position: absolute;
+	width: 100%;
+	z-index: 6;
+}
+
+header h1 {
+	font-family: 'Pacifico', cursive;
+	text-transform: lowercase;
+	color: #f0f0f0;
+	font-size: 72px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	font-size: 24px;
+}
+
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #f0f0f0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.blog-posts-container {
+	overflow-y: auto;
+	height: auto;
+	max-height: 30vh;
+	position: absolute;
+	top: 48vh;
+	left: 0;
+	right: 0;
+	z-index: 4;
+	padding: 0 1vh;
+}
+
+.blog-posts {
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.post {
+	background: rgba(255, 255, 255, 0.8);
+	margin: 10px auto;
+	padding: 12px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	font-size: 20px;
+	width: 65%;
+}
+
+.blog-posts-container::-webkit-scrollbar {
+	display: none;
+}
+
+.blog-posts-container {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.footer-nav {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5
+}
+
+.footer-nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+	margin: 0 10px;
+}
